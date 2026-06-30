@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز اللوتس لطب الأسنان | Lotus Dental Center</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lotus: {
+                            blue: '#1A2B3C',
+                            red: '#8C1C22',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-pattern {
+            background-color: #1A2B3C;
+            /* تم تعديل الاسم ليطابق ملفك في VS Code تماماً */
+            background-image: linear-gradient(rgba(26, 43, 60, 0.85), rgba(26, 43, 60, 0.9)), url("hero.jpg.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.03); }
+        .whatsapp-float { animation: pulse-ring 2s infinite; }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        /* أنيميشن التحميل الخاص بالذكاء الاصطناعي */
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #8C1C22;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-lotus-light text-gray-800 font-sans antialiased selection:bg-lotus-red selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- تم تعديل اسم اللوجو -->
+                    <img src="logo.jpg.jpg" onerror="this.onerror=null; this.src='https://placehold.co/150x50/1A2B3C/FFF?text=Lotus+Dental+Logo';" alt="لوجو مركز اللوتس" class="h-14 w-auto object-contain">
+                </div>
+                
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <a href="https://wa.me/962798880212" target="_blank" class="hidden md:flex items-center justify-center px-4 py-2 text-sm font-bold rounded-full text-green-600 bg-green-100 hover:bg-green-200 transition-colors">
+                        <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.12-.346-.151-.736-.459-1.562-.81-1.89-1.22-3.214-3.184-3.313-3.32-.099-.136-.784-1.055-.784-2.012 0-.957.502-1.42.686-1.62.184-.2.398-.244.53-.244.133 0 .266 0 .376.006.12.006.27-.044.422.327.155.378.525 1.282.571 1.378.046.096.077.208.01.32-.066.111-.1.18-.2.29-.101.111-.212.233-.303.327-.101.101-.205.213-.086.417.119.204.531.879 1.144 1.434.792.716 1.45 1.936 1.66 1.343.212.086.335.08.461.026.126-.054.797-.393.918-.792.121-.399.121-.741.085-.813-.036-.072-.133-.115-.28-.188z"/></svg>
+                        واتساب
+                    </a>
+                    <a href="tel:0798880212" class="flex items-center justify-center px-5 py-2.5 text-sm md:text-base font-bold rounded-full text-white bg-lotus-red hover:bg-red-800 transition-colors shadow-lg hover:shadow-xl">
+                        📞 اتصل الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-32 text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-lotus-red/20 text-red-200 border border-lotus-red/30 font-semibold text-sm mb-6 backdrop-blur-sm">
+                🦷 أفضل رعاية لابتسامتك في عمان
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+                مركز اللوتس لطب الأسنان
+                <br>
+                <span class="text-3xl md:text-5xl font-bold text-gray-300 mt-2 block">رعاية متكاملة وتقنيات متطورة</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-200 mx-auto mb-10 drop-shadow-md">
+                بإشراف الدكتور صدام أبو زيد (أخصائي علاج العصب). نضمن لك علاجاً دقيقاً، بيئة معقمة، وراحة تامة.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/962798880212" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-full text-lg shadow-lg hover:shadow-green-500/50 transition-all transform hover:-translate-y-1 flex items-center justify-center">
+                    احجز موعدك عبر الواتساب
+                </a>
+                <a href="#ai-consult" class="w-full sm:w-auto px-8 py-4 bg-white text-lotus-blue hover:bg-gray-100 font-bold rounded-full text-lg shadow-lg transition-all transform hover:-translate-y-1 border-2 border-transparent hover:border-white">
+                    ✨ استشارة ذكية مجانية
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative -mt-10 z-20 px-4">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 flex flex-wrap justify-center gap-6 md:gap-12 border border-gray-100">
+                <div class="flex items-center space-x-4 space-x-reverse flex-1 min-w-[200px]">
+                    <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center text-lotus-red text-2xl shrink-0">⏱️</div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg">خدمة 24/7</h3>
+                        <p class="text-sm text-gray-500">طوارئ الأسنان على مدار الساعة</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 space-x-reverse flex-1 min-w-[200px]">
+                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-lotus-blue text-2xl shrink-0">🛡️</div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg">شركات التأمين</h3>
+                        <p class="text-sm text-gray-500">معتمدون لدى كافة الشركات</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 space-x-reverse flex-1 min-w-[200px]">
+                    <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-2xl shrink-0">👨‍⚕️</div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg">كادر متخصص</h3>
+                        <p class="text-sm text-gray-500">خبرة وكفاءة طبية عالية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الذكاء الاصطناعي (Gemini API Integration) -->
+    <section id="ai-consult" class="py-20 bg-gradient-to-b from-lotus-light to-white overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <div class="bg-lotus-blue p-8 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 bg-[url('https://placehold.co/800x400/FFF/FFF?text=pattern')] bg-cover"></div>
+                    <h2 class="text-3xl font-bold text-white relative z-10">المستشار الذكي لطب الأسنان ✨</h2>
+                    <p class="text-gray-300 mt-2 relative z-10">مدعوم بتقنيات الذكاء الاصطناعي المتطورة لمساعدتك في فهم أعراضك المبدئية</p>
+                </div>
+                
+                <div class="p-8">
+                    <div class="flex flex-col space-y-6">
+                        <div class="bg-blue-50 border-r-4 border-lotus-blue p-4 rounded-l-lg">
+                            <p class="text-sm text-lotus-blue font-medium">
+                                👋 أهلاً بك! يرجى وصف ما تشعر به (مثال: أشعر بألم عند شرب الماء البارد، أو لدي نزيف في اللثة). سيقوم المستشار الذكي بإعطائك نصيحة مبدئية.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <label for="userSymptom" class="block text-gray-700 font-bold mb-2">ماذا تشعر؟</label>
+                            <textarea id="userSymptom" rows="3" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lotus-red focus:border-transparent outline-none transition-all resize-none" placeholder="اكتب الأعراض التي تعاني منها هنا..."></textarea>
+                        </div>
+                        
+                        <button id="btnAskAI" class="w-full md:w-auto px-8 py-3 bg-lotus-red text-white font-bold rounded-xl shadow-lg hover:bg-red-800 transition-colors flex justify-center items-center">
+                            احصل على الاستشارة المبدئية ✨
+                        </button>
+
+                        <!-- حاوية النتيجة -->
+                        <div id="aiResponseContainer" class="hidden mt-6 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                            <div id="loadingIndicator" class="hidden flex space-x-2 space-x-reverse justify-center items-center py-4">
+                                <span class="text-gray-500 text-sm font-bold ml-3">المستشار الذكي يحلل بياناتك</span>
+                                <div class="typing-indicator"><span></span><span></span><span></span></div>
+                            </div>
+                            <div id="aiResponseText" class="text-gray-800 leading-relaxed font-medium"></div>
+                            
+                            <!-- دعوة لاتخاذ إجراء بعد الاستشارة -->
+                            <div id="aiCta" class="hidden mt-6 pt-4 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <p class="text-sm text-gray-500 italic">*هذه النصيحة مبدئية ولا تغني عن الفحص الطبي السريري.</p>
+                                <a href="https://wa.me/962798880212" target="_blank" class="px-6 py-2 bg-green-500 text-white rounded-lg font-bold hover:bg-green-600 transition-colors text-sm">
+                                    احجز موعدك للفحص الآن
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-lotus-light overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-lotus-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
+                    <!-- تم تعديل اسم الدكتور -->
+                    <img src="doctor.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/600x800/1A2B3C/FFF?text=Doctor+Saddam';" alt="دكتور صدام أبو زيد يعالج مريض" class="relative rounded-3xl shadow-2xl object-cover hover-scale w-full h-[500px]">
+                    <div class="absolute bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border-l-4 border-lotus-red hidden md:block z-10">
+                        <p class="font-bold text-lotus-blue">د. صدام أبو زيد</p>
+                        <p class="text-sm text-gray-500">أخصائي علاج العصب</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-6">
+                    <h2 class="text-sm font-bold text-lotus-red uppercase tracking-wider">لماذا تختارنا؟</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">رعاية طبية تفوق التوقعات في بيئة حديثة ومريحة</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        في مركز اللوتس، نؤمن أن زيارة طبيب الأسنان يجب أن تكون تجربة إيجابية وخالية من التوتر. نجمع بين أحدث التقنيات العالمية والخبرة الطبية لضمان حصولك على ابتسامة صحية وجميلة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-lotus-red uppercase tracking-wider mb-2">خدماتنا الطبية</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">حلول شاملة لصحة وجمال أسنانك</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-lotus-light rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🦷</div>
+                    <h4 class="text-xl font-bold text-lotus-blue mb-3">علاج العصب</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">علاج دقيق لجذور الأسنان بأحدث الأجهزة للتخلص من الألم نهائياً.</p>
+                </div>
+                <div class="bg-lotus-light rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">👶</div>
+                    <h4 class="text-xl font-bold text-lotus-blue mb-3">علاج أسنان الأطفال</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">بيئة مريحة للأطفال لكسر حاجز الخوف، مع علاجات وقائية.</p>
+                </div>
+                <div class="bg-lotus-light rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">✨</div>
+                    <h4 class="text-xl font-bold text-lotus-blue mb-3">تجميل الأسنان</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">تصميم الابتسامة، وتبييض الأسنان بالليزر لابتسامة مثالية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-lotus-blue text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-red-400 uppercase tracking-wider mb-2">جولة مصورة</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold">تعرف على بيئة مركز اللوتس</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- تم تعديل أسماء صور العيادة -->
+                <img src="clinic1.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/333/FFF?text=Clinic+1';" alt="العيادة" class="w-full h-48 md:h-64 object-cover rounded-xl hover:opacity-80 transition-opacity">
+                <img src="clinic2.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/333/FFF?text=Clinic+2';" alt="العيادة من الداخل" class="w-full h-48 md:h-64 object-cover rounded-xl hover:opacity-80 transition-opacity">
+                <img src="clinic3.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/333/FFF?text=Emergency';" alt="طوارئ" class="w-full h-48 md:h-64 object-cover rounded-xl hover:opacity-80 transition-opacity">
+                <img src="clinic4.jpg.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/400x400/333/FFF?text=Facilities';" alt="مرافق العيادة" class="w-full h-48 md:h-64 object-cover rounded-xl hover:opacity-80 transition-opacity">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <!-- تم تعديل اسم اللوجو -->
+                    <img src="logo.jpg.jpg" onerror="this.onerror=null; this.src='https://placehold.co/150x50/FFF/1A2B3C?text=Lotus';" alt="اللوجو" class="h-16 w-auto mb-6 bg-white rounded-lg p-2 object-contain">
+                    <p class="text-sm leading-relaxed mb-6">أفضل عيادة أسنان متخصصة في عمان، نستقبل حالات الطوارئ على مدار الساعة.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">تواصل معنا</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li>📍 شميساني - شارع جابر بن حيان 50</li>
+                        <li>📞 0798880212</li>
+                        <li>✉️ Lotusdentaljo@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/962798880212" target="_blank" class="whatsapp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.12-.346-.151-.736-.459-1.562-.81-1.89-1.22-3.214-3.184-3.313-3.32-.099-.136-.784-1.055-.784-2.012 0-.957.502-1.42.686-1.62.184-.2.398-.244.53-.244.133 0 .266 0 .376.006.12.006.27-.044.422.327.155.378.525 1.282.571 1.378.046.096.077.208.01.32-.066.111-.1.18-.2.29-.101.111-.212.233-.303.327-.101.101-.205.213-.086.417.119.204.531.879 1.144 1.434.792.716 1.45 1.936 1.66 1.343.212.086.335.08.461.026.126-.054.797-.393.918-.792.121-.399.121-.741.085-.813-.036-.072-.133-.115-.28-.188z"/></svg>
+    </a>
+
+    <!-- برمجة الذكاء الاصطناعي -->
+    <script>
+        const apiKey = ""; // API Key provided by the environment
+        const modelUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        
+        const systemPrompt = `أنت المساعد الذكي والطبي الافتراضي لمركز اللوتس لطب الأسنان في عمان. 
+        يُدير المركز د. صدام أبو زيد (أخصائي علاج العصب).
+        مهمتك: تقديم نصيحة طبية مبدئية ومختصرة بناءً على الأعراض التي يذكرها المريض.
+        قواعد هامة جداً:
+        1. الإجابة باللغة العربية وبأسلوب لطيف ومحترف.
+        2. الإجابة يجب أن تكون قصيرة (سطرين أو 3 سطور كحد أقصى).
+        3. اذكر دائماً بلطف في النهاية أن هذه الاستشارة لا تغني عن الفحص الطبي، وشجع المريض بقوة على حجز موعد في العيادة.
+        4. لا تصف أدوية، بل قدم إرشادات عامة (مثل المضمضة بالماء الدافئ والملح، تجنب البارد، الخ).`;
+
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        async function fetchWithRetry(url, options, retries = 5) {
+            const delays = [1000, 2000, 4000, 8000, 16000];
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return await response.json();
+                } catch (e) {
+                    if (i === retries - 1) throw e;
+                    await delay(delays[i]);
+                }
+            }
+        }
+
+        document.getElementById('btnAskAI').addEventListener('click', async () => {
+            const userSymptom = document.getElementById('userSymptom').value.trim();
+            const responseContainer = document.getElementById('aiResponseContainer');
+            const responseText = document.getElementById('aiResponseText');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const aiCta = document.getElementById('aiCta');
+
+            if (!userSymptom) {
+                responseText.innerHTML = "<span class='text-red-500'>يرجى كتابة بعض الأعراض أولاً لنتمكن من مساعدتك.</span>";
+                responseContainer.classList.remove('hidden');
+                return;
+            }
+
+            responseContainer.classList.remove('hidden');
+            responseText.innerHTML = "";
+            aiCta.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+
+            const payload = {
+                contents: [{ parts: [{ text: userSymptom }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            try {
+                const data = await fetchWithRetry(modelUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                loadingIndicator.classList.add('hidden');
+                const aiReply = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (aiReply) {
+                    responseText.innerHTML = aiReply.replace(/\n/g, '<br>');
+                    aiCta.classList.remove('hidden');
+                } else {
+                    responseText.innerHTML = "عذراً، حدث خطأ أثناء معالجة طلبك. يرجى المحاولة لاحقاً أو الاتصال بنا مباشرة.";
+                }
+
+            } catch (error) {
+                loadingIndicator.classList.add('hidden');
+                responseText.innerHTML = "<span class='text-red-600'>عذراً، واجهنا مشكلة في الاتصال بالمستشار الذكي. يرجى الاتصال بعيادتنا مباشرة لحجز موعد.</span>";
+                console.error("Gemini API Error:", error);
+            }
+        });
+    </script>
+</body>
+</html>
